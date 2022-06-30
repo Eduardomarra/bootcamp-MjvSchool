@@ -1,0 +1,13 @@
+<div *ngFor="let i of products" class="product">
+  <div class="card">
+    <div>
+      <h1>{{ i.name }}</h1>
+      <h4 *ngIf="isActive">{{ i.description }}</h4>
+      <span *ngIf="isActive">R${{ i.price }},00</span>
+      <img *ngIf="isActive" src="{{ i.image }}" width="200" />
+      <span *ngIf="isActive" class="{{ i.isAvaliable ? 'com-estoque' : 'sem-estoque' }}">{{ i.isAvaliable ? "Em estoque" : "Sem estoque" }}</span>
+    </div>
+    <button (click)="mostrarProduto()">Mostrar produto</button>
+  </div>
+</div>
+
