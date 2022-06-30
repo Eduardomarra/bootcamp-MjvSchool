@@ -1,10 +1,13 @@
+.wrapper {
+  display: block;
+}
 .product {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 1rem;
   color: #fff;
-  height: calc(100vh - 132px);
+  height: calc(100vh - 211px);
 }
 .product .card {
   display: flex;
@@ -12,7 +15,7 @@
   align-items: center;
   max-width: 250px;
   padding: 1rem;
-  border: 1px solid #fff;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
 }
 .com-estoque {
@@ -20,4 +23,12 @@
 }
 .sem-estoque {
   color: red;
+}
+button {
+  margin: 1rem;
+  padding: 1rem;
+  background: #d4702e;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
 }
