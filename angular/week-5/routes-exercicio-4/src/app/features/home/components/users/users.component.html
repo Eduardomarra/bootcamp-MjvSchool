@@ -1,0 +1,11 @@
+<div class="container">
+  <div *ngFor=" let i of users">
+    <div class="card">
+        <p class="card-text"><span>Id:</span> {{i.id}}</p>
+        <p class="card-text"><span>Nome:</span> {{i.nome}}</p>
+        <p class="card-text"><span>Mensalidade:</span> {{i.valorMensalidade}}</p>
+        <p class="card-text"><span>Inclusion date:</span> {{i.dataUltimoPgto| date: 'd/M/yyyy' }}</p>
+        <p class="card-text"><span>Inclusion date:</span> {{i.dataInclusaoSistema| date: 'd/M/yyyy' }}</p>
+    </div>
+  </div>
+</div>

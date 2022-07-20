@@ -1,0 +1,10 @@
+<div class="container">
+  <div *ngFor=" let t of tasks">
+    <div class="card">
+        <p class="card-text"><span>Id:</span> {{t.id}}</p>
+        <p class="card-text"><span>Description:</span> {{t.description}}</p>
+        <p class="card-text"><span>Completed:</span> {{t.completed ? "sim" : "não"}}</p>
+        <p class="card-text"><span>Inclusion date:</span> {{t.inclusionDate | date: 'd/M/yyyy' }}</p>
+    </div>
+  </div>
+</div>
