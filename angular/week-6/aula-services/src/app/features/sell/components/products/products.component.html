@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <h1>{{ title | uppercase}}</h1>
+  <h3>Produtos disponíveis até : {{dateToday | date: "dd/MM/yyy"}} </h3>
+  <div  class="product">
+    <div class="card" *ngFor="let i of products">
+        <h1>{{ i.name }}</h1>
+        <h4 *ngIf="isActive">{{ i.description }}</h4>
+        <span *ngIf="isActive">Preço: {{ i.price | currency: "BRL" }}</span>
+        <img *ngIf="isActive" src="{{ i.image }}" width="200" />
+        <span>Telefone loja: {{ phone | phone }}</span>
+        <button class="btn" (click)="detailsProduct(i.id)">Detalhes</button>
+        <!-- <span *ngIf="isActive" class="{{ i.isAvaliable ? 'com-estoque' : 'sem-estoque' }}">{{ i.isAvaliable ? "Em estoque" : "Sem estoque" }}</span> -->
+        <!-- <button (click)="obterDesconto(i.id)">Obter desconto (10%)</button> -->
+      </div>
+  </div>
+</div>

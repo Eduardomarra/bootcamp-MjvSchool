@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="wrapper">
+  <div ng-if="product">
+    <div class="card">
+      <h1>{{ product?.name }}</h1>
+      <h4 >{{ product?.description }}</h4>
+      <span >Preço: {{ product?.price | currency: "BRL" }}</span>
+      <img  src="{{ product?.image }}" width="200" />
+      <span  class="{{ product?.isAvaliable ? 'com-estoque' : 'sem-estoque' }}">{{ product?.isAvaliable ? "Em estoque" : "Sem estoque" }}</span>
+  </div>
+</div>
